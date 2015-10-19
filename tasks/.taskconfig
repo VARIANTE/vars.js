@@ -1,0 +1,63 @@
+/**
+ * VARS
+ * (c) VARIANTE (http://variante.io)
+ *
+ * Configuration for Gulp tasks.
+ *
+ * This software is released under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+var path = require('path');
+var $util = require('gulp-util');
+
+var env = {
+  watch: $util.env['watch'] || $util.env['w']
+};
+
+var paths = {
+  src: path.join(__dirname, '../', 'src'),
+  dist: path.join(__dirname, '../', 'dist'),
+  modules: path.join(__dirname, '../', 'node_modules')
+};
+
+var tasks = {
+  clean: {
+    input: paths.dist
+  },
+  build: {
+    input: path.join(paths.dist, 'vars.js'),
+    outputFile: 'vars.min.js',
+    output: path.join(paths.dist),
+    r: {
+      baseUrl: path.join(paths.src),
+      out: path.join(paths.dist, 'vars.js'),
+      paths: {
+        almond: path.join(paths.modules, 'almond', 'almond')
+      },
+      include: ['almond', 'vars'],
+      wrap: {
+        startFile: path.join(paths.src, '_start.js'),
+        endFile: path.join(paths.src, '_end.js')
+      },
+      optimize: 'none',
+      preserveLicenseComments: false,
+      generateSourceMaps: true
+    }
+  },
+  watch: {
+    build: [{
+        files: path.join(paths.src, '**', '*.js'),
+        tasks: [
+          'build'
+        ]
+      }
+    ]
+  }
+};
+
+module.exports = {
+  env: env,
+  paths: paths,
+  tasks: tasks
+};

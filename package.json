@@ -1,0 +1,35 @@
+{
+  "name": "vars",
+  "version": "0.1.0",
+  "homepage": "http://variante.io",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/vars.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha test --recursive --reporter spec"
+  },
+  "authors": [
+    "Andrew Wei <andrew@variante.io>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VARIANTE/vars.js.git"
+  },
+  "devDependencies": {
+    "almond": "^0.3.1",
+    "chai": "^3.3.0",
+    "del": "^2.0.2",
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.0.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.6",
+    "mocha": "^2.3.3",
+    "requirejs": "~2.1.15",
+    "run-sequence": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=4.1.1",
+    "npm": ">=2.14.4"
+  }
+}
