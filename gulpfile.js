@@ -8,7 +8,10 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 
+require('./tasks/clean');
 require('./tasks/build');
+require('./tasks/docs');
+require('./tasks/test');
 
 var config = require('./tasks/.taskconfig');
 var gulp = require('gulp');
@@ -20,7 +23,7 @@ var sequence = require('run-sequence');
  * @param {Boolean} --watch
  */
 gulp.task('default', function(done) {
-  var seq = ['clean', 'build'];
+  var seq = ['clean', 'build', 'docs'];
 
   seq.push(function() {
     if (config.env.watch) {

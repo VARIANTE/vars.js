@@ -7,52 +7,24 @@
  *
  * Construction of the VARS API.
  */
-
 'use strict';
 
-define('vars', [
-  'functions',
-  'math',
-  'objects'
-], function(
-  functions,
-  math,
-  objects
-) {
-  var vars = {};
+let injectModule = require('./helpers/injectModule');
 
-  Object.defineProperty(vars, 'name', { value: 'VARS', writable: false });
-  Object.defineProperty(vars, 'version', { value: '0.1.0', writable: false });
+/**
+ * @module vars
+ */
+function VARS() {
+  let vars = {
+    name: 'VARS',
+    version: '0.1.0'
+  };
 
-  injectModule('functions', functions);
-  injectModule('math', math);
-  injectModule('objects', objects);
-
-  /**
-   * @private
-   *
-   * Injects a module and all of its sub-modules into the core VARS module.
-   *
-   * @param {String} name    Name of the module (used as the key for the
-   *                         key-value pair in VARS).
-   * @param {Object} module  Module object (used as value for the key-value
-   *                         pair in VARS).
-   */
-  function injectModule(name, module) {
-    Object.defineProperty(vars, name, {
-      value: module,
-      writable: false
-    });
-
-    for (var key in module) {
-      if (module.hasOwnProperty(key)) {
-        Object.defineProperty(vars, key, {
-          value: module[key],
-          writable: false
-        });
-      }
-    }
-  }
+  injectModule(vars, 'functions', require('./functions'));
+  injectModule(vars, 'math', require('./math'));
+  injectModule(vars, 'objects', require('./objects'));
 
   return vars;
-});
+}
+
+module.exports = VARS();

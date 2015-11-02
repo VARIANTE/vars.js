@@ -1,0 +1,38 @@
+'use strict';
+
+/**
+ * Verifies that a given is of the given type.
+ *
+ * @param {*} value - Any value.
+ * @param {*} type  - Any class or string that describes a type.
+ *
+ * @return {Boolean} True if validation passes, false otherwise.
+ *
+ * @alias module:vars~helpers.checkType
+ */
+function checkType(value, type) {
+  if (typeof type === 'string') {
+    switch (type) {
+      case 'string':
+      case 'object':
+      case 'number':
+      case 'boolean':
+      case 'function':
+        return typeof value === type;
+
+      case 'class':
+        return typeof value === 'function';
+
+      case 'array':
+        return value instanceof Array;
+
+      default:
+        return false;
+    }
+  }
+  else {
+    return value instanceof type;
+  }
+}
+
+module.exports = checkType;
