@@ -8,7 +8,6 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 
-require('./tasks/clean');
 require('./tasks/build');
 require('./tasks/docs');
 require('./tasks/test');

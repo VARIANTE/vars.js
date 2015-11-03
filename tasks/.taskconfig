@@ -82,6 +82,12 @@ var tasks = {
       }
     }
   },
+  docs: {
+    clean: paths.docs,
+    input: paths.src,
+    readme: path.join(paths.base, 'README.md'),
+    config: path.join(paths.base, '.jsdocconfig')
+  },
   watch: {
     build: [{
         files: path.join(paths.src, '**', '*.js'),

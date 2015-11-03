@@ -1,30 +1,32 @@
-/**
+/*!
  * VARS
  * (c) VARIANTE (http://variante.io)
  *
  * This software is released under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
- *
- * Construction of the VARS API.
  */
+
 'use strict';
 
 let injectModule = require('./helpers/injectModule');
 
 /**
- * @module vars
+* @module vars
+*/
+let vars = {};
+
+/**
+ * @property {string} name - Module name.
  */
-function VARS() {
-  let vars = {
-    name: 'VARS',
-    version: '0.1.0'
-  };
+Object.defineProperty(vars, 'name', { value: 'VARS', writable: false });
 
-  injectModule(vars, 'functions', require('./functions'));
-  injectModule(vars, 'math', require('./math'));
-  injectModule(vars, 'objects', require('./objects'));
+/**
+ * @property {string} version - Version number.
+ */
+Object.defineProperty(vars, 'version', { value: '0.3.0', writable: false });
 
-  return vars;
-}
+injectModule(vars, 'functions', require('./functions'));
+injectModule(vars, 'math', require('./math'));
+injectModule(vars, 'objects', require('./objects'));
 
-module.exports = VARS();
+module.exports = vars;

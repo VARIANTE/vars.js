@@ -2,8 +2,6 @@
  * VARS
  * (c) VARIANTE (http://variante.io)
  *
- * Run Mocha tests.
- *
  * This software is released under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
  */

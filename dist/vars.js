@@ -54,40 +54,50 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/*!
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
+	'use strict';
+
+	var injectModule = __webpack_require__(1);
+
+	/**
+	* @module vars
+	*/
+	var vars = {};
+
+	/**
+	 * @property {string} name - Module name.
+	 */
+	Object.defineProperty(vars, 'name', { value: 'VARS', writable: false });
+
+	/**
+	 * @property {string} version - Version number.
+	 */
+	Object.defineProperty(vars, 'version', { value: '0.3.0', writable: false });
+
+	injectModule(vars, 'functions', __webpack_require__(2));
+	injectModule(vars, 'math', __webpack_require__(9));
+	injectModule(vars, 'objects', __webpack_require__(14));
+
+	module.exports = vars;
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
 	/**
 	 * VARS
 	 * (c) VARIANTE (http://variante.io)
 	 *
 	 * This software is released under the MIT License:
 	 * http://www.opensource.org/licenses/mit-license.php
-	 *
-	 * Construction of the VARS API.
 	 */
-	'use strict';
-
-	var injectModule = __webpack_require__(1);
-
-	/**
-	 * @module vars
-	 */
-	function VARS() {
-	  var vars = {
-	    name: 'VARS',
-	    version: '0.1.0'
-	  };
-
-	  injectModule(vars, 'functions', __webpack_require__(2));
-	  injectModule(vars, 'math', __webpack_require__(9));
-	  injectModule(vars, 'objects', __webpack_require__(14));
-
-	  return vars;
-	}
-
-	module.exports = VARS();
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
 
 	'use strict'
 
@@ -125,6 +135,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -144,6 +162,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict';
 
@@ -202,6 +228,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict';
 
@@ -273,6 +307,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 5 */
 /***/ function(module, exports) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -298,6 +340,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict'
 
@@ -347,6 +397,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict';
 
 	var assertType = __webpack_require__(4);
@@ -387,6 +445,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -402,6 +468,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict'
 
@@ -423,6 +497,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict';
 
@@ -457,6 +539,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict';
 
@@ -497,6 +587,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict';
 
 	var assertType = __webpack_require__(4);
@@ -529,6 +627,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict';
 
 	var assertType = __webpack_require__(4);
@@ -556,6 +662,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -575,6 +689,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict';
 
@@ -630,6 +752,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 16 */
 /***/ function(module, exports) {
 
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -664,6 +794,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 17 */
 /***/ function(module, exports) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
 
 	'use strict'
 
