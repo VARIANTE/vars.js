@@ -19,7 +19,7 @@ var sequence = require('run-sequence');
 /**
  * Default task.
  *
- * @param {Boolean} --watch
+ * @param {boolean} --watch
  */
 gulp.task('default', function(done) {
   var seq = ['clean', 'build', 'docs'];

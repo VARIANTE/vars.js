@@ -25,13 +25,13 @@ let checkType = require('./checkType');
  *                                                array, all elements in the
  *                                                array will be evaluated
  *                                                against.
- * @param {Boolean}      [allowUndefined=false] - Specifies whether assertion
+ * @param {boolean}      [allowUndefined=false] - Specifies whether assertion
  *                                                should pass if the supplied
  *                                                value is undefined.
- * @param {String}       [message]              - Message to be displayed when
+ * @param {string}       [message]              - Message to be displayed when
  *                                                assertion fails.
  *
- * @return {Boolean} True if assert passed, false otherwise.
+ * @return {boolean} True if assert passed, false otherwise.
  *
  * @throws Error if assert fails.
  *

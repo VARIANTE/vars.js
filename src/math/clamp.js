@@ -13,11 +13,11 @@ let assertType = require('../helpers/assertType');
 /**
  * Clamps a value to a min and max value, inclusive.
  *
- * @param {Number} value - Value to be clamped.
- * @param {Number} min   - Minimum value of the clamp boundary.
- * @param {Number} max   - Maximum value of the clamp boundary.
+ * @param {number} value - Value to be clamped.
+ * @param {number} min   - Minimum value of the clamp boundary.
+ * @param {number} max   - Maximum value of the clamp boundary.
  *
- * @return {Number} The resulting value.
+ * @return {number} The resulting value.
  *
  * @alias module:vars~math.clamp
  */

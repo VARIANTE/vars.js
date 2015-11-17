@@ -13,9 +13,9 @@ let assertType = require('../helpers/assertType');
 /**
  * Determines if a number is an odd number.
  *
- * @param {Number} value - Value of interest.
+ * @param {number} value - Value of interest.
  *
- * @return {Boolean} True if number is odd, false otherwise.
+ * @return {boolean} True if number is odd, false otherwise.
  *
  * @alias module:vars~math.isOdd
  */

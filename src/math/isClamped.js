@@ -14,13 +14,13 @@ let assertType = require('../helpers/assertType');
  * Determines if value is bounded by the specified min and max values, defaults
  * include edge values.
  *
- * @param {Number}  value             - Value to test against.
- * @param {Number}  min               - Minimum value to test against.
- * @param {Number}  max               - Maximum value to test against.
- * @param {Boolean} [exclusive=false] - Specifies whether the edge values are
+ * @param {number}  value             - Value to test against.
+ * @param {number}  min               - Minimum value to test against.
+ * @param {number}  max               - Maximum value to test against.
+ * @param {boolean} [exclusive=false] - Specifies whether the edge values are
  *                                      omitted.
  *
- * @return {Boolean} True if bounded, false otherwise.
+ * @return {boolean} True if bounded, false otherwise.
  *
  * @alias module:vars~math.isClamped
  */

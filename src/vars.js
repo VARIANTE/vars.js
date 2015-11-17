@@ -23,7 +23,7 @@ Object.defineProperty(vars, 'name', { value: 'VARS', writable: false });
 /**
  * @property {string} version - Version number.
  */
-Object.defineProperty(vars, 'version', { value: '0.3.1', writable: false });
+Object.defineProperty(vars, 'version', { value: '0.4.0', writable: false });
 
 injectModule(vars, 'functions', require('./functions'));
 injectModule(vars, 'math', require('./math'));

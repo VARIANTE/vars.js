@@ -12,7 +12,7 @@
  * Injects a module and all of its sub-modules into a target module.
  *
  * @param {Object} target     - Target module for injecting a module into.
- * @param {String} moduleName - Name of the module to be injected (used as the
+ * @param {string} moduleName - Name of the module to be injected (used as the
  *                              key for the key-value pair in target module).
  * @param {Object} module     - Module object (used as value for the key-value
  *                              pair in target module).

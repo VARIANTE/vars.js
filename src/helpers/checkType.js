@@ -14,7 +14,7 @@
  * @param {*} value - Any value.
  * @param {*} type  - Any class or string that describes a type.
  *
- * @return {Boolean} True if validation passes, false otherwise.
+ * @return {boolean} True if validation passes, false otherwise.
  *
  * @alias module:vars~helpers.checkType
  */

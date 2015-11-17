@@ -17,8 +17,8 @@ let assertType = require('../helpers/assertType');
  * the leading edge instead of the trailing.
  *
  * @param {Function} method          - Method to be debounced.
- * @param {Number}   [delay=0]       - Debounce rate in milliseconds.
- * @param {Boolean}  [leading=false] - Indicates whether the method is triggered
+ * @param {number}   [delay=0]       - Debounce rate in milliseconds.
+ * @param {boolean}  [leading=false] - Indicates whether the method is triggered
  *                                     on the leading edge instead of the
  *                                     trailing.
  *

@@ -16,11 +16,11 @@ let assertType = require('../helpers/assertType');
  * specified.
  *
  * @param {*}       value              - Value to evaluate.
- * @param {Boolean} [recursive=false]  - Specifies whether to recursively
+ * @param {boolean} [recursive=false]  - Specifies whether to recursively
  *                                       evaluate the supplied value's inner
  *                                       values (i.e. an Array or Object).
  *
- * @return {Boolean} True if null, false otherwise.
+ * @return {boolean} True if null, false otherwise.
  *
  * @alias module:vars~objects.noval
  */

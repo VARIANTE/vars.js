@@ -13,7 +13,7 @@
  *
  * @param {*} object - Any object type.
  *
- * @return {Number} Size of specified object (depending on the object type, it
+ * @return {number} Size of specified object (depending on the object type, it
  *                  can be the number of keys in a plain object, number of
  *                  elements in an array, number of characters in a string,
  *                  number of digits in a number, and 0 for all other types.

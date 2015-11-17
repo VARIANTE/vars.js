@@ -13,11 +13,11 @@ let assertType = require('../helpers/assertType');
 /**
  * Determines if a number is an even number. Zero is considered even by default.
  *
- * @param {Number}  value               - Value of interest.
- * @param {Boolean} [excludeZero=false] - Speicifies whether zero should be
+ * @param {number}  value               - Value of interest.
+ * @param {boolean} [excludeZero=false] - Speicifies whether zero should be
  *                                        excluded from the test.
  *
- * @return {Boolean} True if number is even, false otherwise.
+ * @return {boolean} True if number is even, false otherwise.
  *
  * @alias module:vars~math.isEven
  */

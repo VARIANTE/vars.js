@@ -79,11 +79,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * @property {string} version - Version number.
 	 */
-	Object.defineProperty(vars, 'version', { value: '0.3.1', writable: false });
+	Object.defineProperty(vars, 'version', { value: '0.4.0', writable: false });
 
 	injectModule(vars, 'functions', __webpack_require__(2));
 	injectModule(vars, 'math', __webpack_require__(9));
-	injectModule(vars, 'objects', __webpack_require__(14));
+	injectModule(vars, 'objects', __webpack_require__(15));
 
 	module.exports = vars;
 
@@ -105,7 +105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Injects a module and all of its sub-modules into a target module.
 	 *
 	 * @param {Object} target     - Target module for injecting a module into.
-	 * @param {String} moduleName - Name of the module to be injected (used as the
+	 * @param {string} moduleName - Name of the module to be injected (used as the
 	 *                              key for the key-value pair in target module).
 	 * @param {Object} module     - Module object (used as value for the key-value
 	 *                              pair in target module).
@@ -182,8 +182,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * the leading edge instead of the trailing.
 	 *
 	 * @param {Function} method          - Method to be debounced.
-	 * @param {Number}   [delay=0]       - Debounce rate in milliseconds.
-	 * @param {Boolean}  [leading=false] - Indicates whether the method is triggered
+	 * @param {number}   [delay=0]       - Debounce rate in milliseconds.
+	 * @param {boolean}  [leading=false] - Indicates whether the method is triggered
 	 *                                     on the leading edge instead of the
 	 *                                     trailing.
 	 *
@@ -258,13 +258,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *                                                array, all elements in the
 	 *                                                array will be evaluated
 	 *                                                against.
-	 * @param {Boolean}      [allowUndefined=false] - Specifies whether assertion
+	 * @param {boolean}      [allowUndefined=false] - Specifies whether assertion
 	 *                                                should pass if the supplied
 	 *                                                value is undefined.
-	 * @param {String}       [message]              - Message to be displayed when
+	 * @param {string}       [message]              - Message to be displayed when
 	 *                                                assertion fails.
 	 *
-	 * @return {Boolean} True if assert passed, false otherwise.
+	 * @return {boolean} True if assert passed, false otherwise.
 	 *
 	 * @throws Error if assert fails.
 	 *
@@ -320,10 +320,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Asserts the specified condition and throws a warning if assertion fails.
 	 *
-	 * @param {Boolean} condition - Condition to validate against.
-	 * @param {String}  [message] - Message to be displayed when assertion fails.
+	 * @param {boolean} condition - Condition to validate against.
+	 * @param {string}  [message] - Message to be displayed when assertion fails.
 	 *
-	 * @return {Boolean} True if assert passed, false otherwise.
+	 * @return {boolean} True if assert passed, false otherwise.
 	 *
 	 * @throws Error if assert fails.
 	 *
@@ -357,7 +357,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @param {*} value - Any value.
 	 * @param {*} type  - Any class or string that describes a type.
 	 *
-	 * @return {Boolean} True if validation passes, false otherwise.
+	 * @return {boolean} True if validation passes, false otherwise.
 	 *
 	 * @alias module:vars~helpers.checkType
 	 */
@@ -491,6 +491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(math, 'isClamped', { value: __webpack_require__(11), writable: false, enumerable: true });
 	Object.defineProperty(math, 'isEven', { value: __webpack_require__(12), writable: false, enumerable: true });
 	Object.defineProperty(math, 'isOdd', { value: __webpack_require__(13), writable: false, enumerable: true });
+	Object.defineProperty(math, 'random', { value: __webpack_require__(14), writable: false, enumerable: true });
 
 	module.exports = math;
 
@@ -513,11 +514,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Clamps a value to a min and max value, inclusive.
 	 *
-	 * @param {Number} value - Value to be clamped.
-	 * @param {Number} min   - Minimum value of the clamp boundary.
-	 * @param {Number} max   - Maximum value of the clamp boundary.
+	 * @param {number} value - Value to be clamped.
+	 * @param {number} min   - Minimum value of the clamp boundary.
+	 * @param {number} max   - Maximum value of the clamp boundary.
 	 *
-	 * @return {Number} The resulting value.
+	 * @return {number} The resulting value.
 	 *
 	 * @alias module:vars~math.clamp
 	 */
@@ -556,13 +557,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Determines if value is bounded by the specified min and max values, defaults
 	 * include edge values.
 	 *
-	 * @param {Number}  value             - Value to test against.
-	 * @param {Number}  min               - Minimum value to test against.
-	 * @param {Number}  max               - Maximum value to test against.
-	 * @param {Boolean} [exclusive=false] - Specifies whether the edge values are
+	 * @param {number}  value             - Value to test against.
+	 * @param {number}  min               - Minimum value to test against.
+	 * @param {number}  max               - Maximum value to test against.
+	 * @param {boolean} [exclusive=false] - Specifies whether the edge values are
 	 *                                      omitted.
 	 *
-	 * @return {Boolean} True if bounded, false otherwise.
+	 * @return {boolean} True if bounded, false otherwise.
 	 *
 	 * @alias module:vars~math.isClamped
 	 */
@@ -602,11 +603,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Determines if a number is an even number. Zero is considered even by default.
 	 *
-	 * @param {Number}  value               - Value of interest.
-	 * @param {Boolean} [excludeZero=false] - Speicifies whether zero should be
+	 * @param {number}  value               - Value of interest.
+	 * @param {boolean} [excludeZero=false] - Speicifies whether zero should be
 	 *                                        excluded from the test.
 	 *
-	 * @return {Boolean} True if number is even, false otherwise.
+	 * @return {boolean} True if number is even, false otherwise.
 	 *
 	 * @alias module:vars~math.isEven
 	 */
@@ -642,9 +643,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * Determines if a number is an odd number.
 	 *
-	 * @param {Number} value - Value of interest.
+	 * @param {number} value - Value of interest.
 	 *
-	 * @return {Boolean} True if number is odd, false otherwise.
+	 * @return {boolean} True if number is odd, false otherwise.
 	 *
 	 * @alias module:vars~math.isOdd
 	 */
@@ -670,6 +671,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
+	'use strict';
+
+	var assertType = __webpack_require__(4);
+
+	/**
+	 * Generates a random real number within the given range, starting from the
+	 * minimum (inclusive) to the maximum (exclusive).
+	 *
+	 * @param {number}  value - Value of interest.
+	 * @param {number}  min   - Min value (inclusive).
+	 * @param {number}  max   - Max value (exclusive).
+	 *
+	 * @return {number} Random number within the given range.
+	 *
+	 * @alias module:vars~math.random
+	 */
+	function random(value, min, max) {
+	  assertType(value, 'number', false, 'Invalid value specified');
+	  assertType(min, 'number', false, 'Parameter \'min\' must be a number');
+	  assertType(max, 'number', false, 'Parameter \'max\' must be a number');
+
+	  return Math.random() * (max - min) + min;
+	}
+
+	module.exports = random;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * VARS
+	 * (c) VARIANTE (http://variante.io)
+	 *
+	 * This software is released under the MIT License:
+	 * http://www.opensource.org/licenses/mit-license.php
+	 */
+
 	'use strict'
 
 	/**
@@ -680,14 +719,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	;
 	var objects = {};
 
-	Object.defineProperty(objects, 'noval', { value: __webpack_require__(15), writable: false, enumerable: true });
-	Object.defineProperty(objects, 'keyOfValue', { value: __webpack_require__(16), writable: false, enumerable: true });
-	Object.defineProperty(objects, 'length', { value: __webpack_require__(17), writable: false, enumerable: true });
+	Object.defineProperty(objects, 'noval', { value: __webpack_require__(16), writable: false, enumerable: true });
+	Object.defineProperty(objects, 'keyOfValue', { value: __webpack_require__(17), writable: false, enumerable: true });
+	Object.defineProperty(objects, 'length', { value: __webpack_require__(18), writable: false, enumerable: true });
 
 	module.exports = objects;
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -712,11 +751,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * specified.
 	 *
 	 * @param {*}       value              - Value to evaluate.
-	 * @param {Boolean} [recursive=false]  - Specifies whether to recursively
+	 * @param {boolean} [recursive=false]  - Specifies whether to recursively
 	 *                                       evaluate the supplied value's inner
 	 *                                       values (i.e. an Array or Object).
 	 *
-	 * @return {Boolean} True if null, false otherwise.
+	 * @return {boolean} True if null, false otherwise.
 	 *
 	 * @alias module:vars~objects.noval
 	 */
@@ -755,7 +794,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = noval;
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	/**
@@ -798,7 +837,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = keyOfValue;
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports) {
 
 	/**
@@ -816,7 +855,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @param {*} object - Any object type.
 	 *
-	 * @return {Number} Size of specified object (depending on the object type, it
+	 * @return {number} Size of specified object (depending on the object type, it
 	 *                  can be the number of keys in a plain object, number of
 	 *                  elements in an array, number of characters in a string,
 	 *                  number of digits in a number, and 0 for all other types.
