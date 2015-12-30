@@ -79,7 +79,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * @property {string} version - Version number.
 	 */
-	Object.defineProperty(vars, 'version', { value: '0.4.0', writable: false });
+	Object.defineProperty(vars, 'version', { value: '0.5.0', writable: false });
 
 	injectModule(vars, 'functions', __webpack_require__(2));
 	injectModule(vars, 'math', __webpack_require__(9));
@@ -99,7 +99,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Injects a module and all of its sub-modules into a target module.
@@ -112,7 +112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @alias module:vars~helpers.injectModule
 	 */
-	;
+
 	function injectModule(target, moduleName, module) {
 	  Object.defineProperty(target, moduleName, {
 	    value: module,
@@ -143,14 +143,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Collection of function manipulating methods.
 	 *
 	 * @namespace module:vars~functions
 	 */
-	;
+
 	var functions = {};
 
 	Object.defineProperty(functions, 'debounce', { value: __webpack_require__(3), writable: false, enumerable: true });
@@ -239,8 +239,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	function _instanceof(left, right) { if (right != null && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
-
 	var assert = __webpack_require__(5);
 	var checkType = __webpack_require__(6);
 
@@ -281,7 +279,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  if (allowUndefined && value === undefined) {
 	    ok = true;
-	  } else if (_instanceof(type, Array)) {
+	  } else if (type instanceof Array) {
 	    var n = type.length;
 
 	    for (var i = 0; i < n; i++) {
@@ -315,7 +313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Asserts the specified condition and throws a warning if assertion fails.
@@ -329,7 +327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @alias module:vars~helpers.assert
 	 */
-	;
+
 	function assert(condition, message) {
 	  if (!condition) throw new Error(message || 'Assert failed');
 	  return condition;
@@ -349,7 +347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Verifies that a given is of the given type.
@@ -361,11 +359,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @alias module:vars~helpers.checkType
 	 */
-	;
 
-	function _instanceof(left, right) { if (right != null && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
-
-	function _typeof(obj) { return obj && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 	function checkType(value, type) {
 	  if (typeof type === 'string') {
@@ -381,13 +376,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return typeof value === 'function';
 
 	      case 'array':
-	        return _instanceof(value, Array);
+	        return value instanceof Array;
 
 	      default:
 	        return false;
 	    }
 	  } else {
-	    return _instanceof(value, type);
+	    return value instanceof type;
 	  }
 	}
 
@@ -453,14 +448,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * This method does absolutely nothing.
 	 *
 	 * @alias module:vars~functions.noop
 	 */
-	;
+
 	function noop() {}
 
 	module.exports = noop;
@@ -477,14 +472,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Collection of math utility methods.
 	 *
 	 * @namespace module:vars~math
 	 */
-	;
+
 	var math = {};
 
 	Object.defineProperty(math, 'clamp', { value: __webpack_require__(10), writable: false, enumerable: true });
@@ -707,14 +702,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Collection of object manipulating methods.
 	 *
 	 * @namespace module:vars~objects
 	 */
-	;
+
 	var objects = {};
 
 	Object.defineProperty(objects, 'noval', { value: __webpack_require__(16), writable: false, enumerable: true });
@@ -737,9 +732,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	function _typeof(obj) { return obj && obj.constructor === Symbol ? "symbol" : typeof obj; }
-
-	function _instanceof(left, right) { if (right != null && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 	var assertType = __webpack_require__(4);
 
@@ -770,7 +763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    } else {
 	      return false;
 	    }
-	  } else if (recursive && _instanceof(value, Array)) {
+	  } else if (recursive && value instanceof Array) {
 	    var n = value.length;
 
 	    for (var i = 0; i < n; i++) {
@@ -803,7 +796,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Gets the key of a given value in a given object.
@@ -813,9 +806,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @alias module:vars~objects.keyOfValue
 	 */
-	;
 
-	function _typeof(obj) { return obj && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 	function keyOfValue(object, value) {
 	  if (!object || !value) return null;
@@ -846,7 +838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.opensource.org/licenses/mit-license.php
 	 */
 
-	'use strict'
+	'use strict';
 
 	/**
 	 * Gets the number of keys in a given object.
@@ -860,9 +852,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @alias module:vars~objects.length
 	 */
-	;
 
-	function _typeof(obj) { return obj && obj.constructor === Symbol ? "symbol" : typeof obj; }
+	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 
 	function length(object) {
 	  if (object === undefined || object === null) return 0;
