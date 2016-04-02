@@ -1,4 +1,4 @@
-# VARS.js
+# VARS.js (Deprecated)
 
 Internal JavaScript utility UMD library.
 
