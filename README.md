@@ -10,7 +10,7 @@ Add this repo to `package.json`:
 {
   [..]
   "dependencies": {
-    "vars": "git+https://github.com/VARIANTE/vars.js.git"
+    "vars": "git+https://github.com/andrewscwei/vars.js.git"
   }
   [..]
 }
