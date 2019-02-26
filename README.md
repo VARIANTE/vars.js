@@ -15,7 +15,3 @@ Add this repo to `package.json`:
   [..]
 }
 ```
-
-## License
-
-This software is released under the [MIT License](http://opensource.org/licenses/MIT).
