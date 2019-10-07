@@ -1,4 +1,4 @@
-# VARS.js (Deprecated)
+# VARS.js ![](https://img.shields.io/maintenance/no/2016)
 
 Internal JavaScript utility UMD library.
 
